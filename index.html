@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Minesweeper</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>💣 Classic Minesweeper</h1>
+      <section class="controls" aria-label="Game controls">
+        <label>
+          Difficulty
+          <select id="difficulty">
+            <option value="easy">Easy (9x9, 10 mines)</option>
+            <option value="medium">Medium (16x16, 40 mines)</option>
+            <option value="hard">Hard (16x30, 99 mines)</option>
+          </select>
+        </label>
+        <button id="new-game" type="button">New Game</button>
+      </section>
+
+      <section class="hud" aria-live="polite">
+        <div>🚩 Flags: <span id="flags-left">0</span></div>
+        <div>⏱️ Time: <span id="time">0</span>s</div>
+        <div id="status">Ready</div>
+      </section>
+
+      <p class="hint">Left click: reveal • Right click: flag</p>
+
+      <div id="board" class="board" role="grid" aria-label="Minesweeper board"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
